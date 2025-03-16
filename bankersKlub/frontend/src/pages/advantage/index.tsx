@@ -10,7 +10,6 @@ import {
   useGetAdvantagesQuery,
   useUpdateAdvantageMutation,
 } from "../../services/advantage.api";
-import { useAppDispatch } from "../../store/store";
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 
@@ -22,7 +21,6 @@ import DataTable from "../../component/DataTable";
 const Advantage = () => {
   const {
     data: advantages,
-    error,
     isLoading,
     refetch,
   } = useGetAdvantagesQuery(undefined);
@@ -34,7 +32,6 @@ const Advantage = () => {
   const [updateAdvantage] = useUpdateAdvantageMutation();
   const [deleteAdvantage] = useDeleteAdvantageMutation();
 
-  const dispatch = useAppDispatch();
   const storedAdvantages = advantages?.data || [];
 
   /**

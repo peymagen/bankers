@@ -66,7 +66,7 @@ interface IService extends Base {
   description: string;
   quotes: null | string;
   video: null | File[];
-  image: null | File[];
+  image: null | File[] | string;
   main_image: null | File[];
 }
 interface IJourney extends Base {

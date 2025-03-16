@@ -10,7 +10,7 @@ import {
   useGetTestimonialsQuery,
   useUpdateTestimonialMutation,
 } from "../../services/testimonial.api";
-import { useAppDispatch } from "../../store/store";
+
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 
@@ -22,7 +22,7 @@ import DataTable from "../../component/DataTable";
 const Testimonial = () => {
   const {
     data: testimonials,
-    error,
+
     isLoading,
     refetch,
   } = useGetTestimonialsQuery(undefined);
@@ -36,7 +36,6 @@ const Testimonial = () => {
   const [updateTestimonial] = useUpdateTestimonialMutation();
   const [deleteTestimonial] = useDeleteTestimonialMutation();
 
-  const dispatch = useAppDispatch();
   const storedTestimonials = testimonials?.data || [];
 
   /**

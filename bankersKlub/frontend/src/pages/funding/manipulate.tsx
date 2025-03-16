@@ -17,7 +17,10 @@ import FileUploader from "../../component/FileUploader";
 
 const fundingSchema = Yup.object({
   name: Yup.string().required("Name is required"),
-  amount: Yup.string().required("Amount is required"),
+  amount: Yup.number()
+    .typeError("Amount must be a number") // Ensures input is a number
+    .positive("Amount must be a positive number") // Ensures positive value
+    .required("Amount is required"),
   image: Yup.mixed().nullable(),
 });
 

@@ -10,7 +10,7 @@ import {
   useGetCompanysQuery,
   useUpdateCompanyMutation,
 } from "../../services/company.api";
-import { useAppDispatch } from "../../store/store";
+
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 
@@ -22,7 +22,7 @@ import DataTable from "../../component/DataTable";
 const Company = () => {
   const {
     data: companys,
-    error,
+
     isLoading,
     refetch,
   } = useGetCompanysQuery(undefined);
@@ -34,7 +34,6 @@ const Company = () => {
   const [updateCompany] = useUpdateCompanyMutation();
   const [deleteCompany] = useDeleteCompanyMutation();
 
-  const dispatch = useAppDispatch();
   const storedCompanys = companys?.data || [];
 
   /**

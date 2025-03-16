@@ -21,7 +21,7 @@ import DataTable from "../../component/DataTable";
 const Blog = () => {
   const {
     data: blogs,
-    error,
+
     isLoading,
     refetch,
   } = useGetBlogsQuery(undefined);

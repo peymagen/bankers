@@ -18,7 +18,7 @@ import DataTable from "../../component/DataTable";
 const Funding = () => {
   const {
     data: fundings,
-    error,
+
     isLoading,
     refetch,
   } = useGetFundingsQuery(undefined);

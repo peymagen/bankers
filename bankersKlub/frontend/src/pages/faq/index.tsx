@@ -19,7 +19,7 @@ import DataTable from "../../component/DataTable";
  * @returns {JSX.Element} - The rendered FaqsPage component.
  */
 const Faq = () => {
-  const { data: faqs, error, isLoading, refetch } = useGetFaqsQuery(undefined);
+  const { data: faqs, isLoading, refetch } = useGetFaqsQuery(undefined);
   const [openDialog, setOpenDialog] = useState(false);
   const [faqToEdit, setFaqToEdit] = useState<any | null>(null);
   const [openConfirmDelete, setOpenConfirmDelete] = useState(false);

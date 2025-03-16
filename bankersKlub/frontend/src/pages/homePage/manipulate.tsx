@@ -49,7 +49,6 @@ const ManipulateDialog: React.FC<HomeDialogProps> = ({
     control,
     handleSubmit,
     reset,
-    setValue,
     formState: { errors },
   } = useForm({ resolver: yupResolver(homeSchema) });
 

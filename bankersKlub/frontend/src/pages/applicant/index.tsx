@@ -10,7 +10,7 @@ import {
   useGetApplicantsQuery,
   useUpdateApplicantMutation,
 } from "../../services/applicant.api";
-import { useAppDispatch } from "../../store/store";
+
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 
@@ -22,7 +22,7 @@ import DataTable from "../../component/DataTable";
 const Applicant = () => {
   const {
     data: applicants,
-    error,
+
     isLoading,
     refetch,
   } = useGetApplicantsQuery(undefined);
@@ -34,7 +34,6 @@ const Applicant = () => {
   const [updateApplicant] = useUpdateApplicantMutation();
   const [deleteApplicant] = useDeleteApplicantMutation();
 
-  const dispatch = useAppDispatch();
   const storedApplicants = applicants?.data || [];
 
   /**

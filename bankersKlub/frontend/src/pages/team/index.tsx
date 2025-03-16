@@ -10,7 +10,7 @@ import {
   useGetTeamsQuery,
   useUpdateTeamMutation,
 } from "../../services/team.api";
-import { useAppDispatch } from "../../store/store";
+
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 
@@ -22,7 +22,7 @@ import DataTable from "../../component/DataTable";
 const Team = () => {
   const {
     data: teams,
-    error,
+
     isLoading,
     refetch,
   } = useGetTeamsQuery(undefined);
@@ -34,7 +34,6 @@ const Team = () => {
   const [updateTeam] = useUpdateTeamMutation();
   const [deleteTeam] = useDeleteTeamMutation();
 
-  const dispatch = useAppDispatch();
   const storedTeams = teams?.data || [];
 
   /**

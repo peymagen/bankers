@@ -18,7 +18,7 @@ import DataTable from "../../component/DataTable";
 const HomePage = () => {
   const {
     data: homes,
-    error,
+
     isLoading,
     refetch,
   } = useGetHomesQuery(undefined);

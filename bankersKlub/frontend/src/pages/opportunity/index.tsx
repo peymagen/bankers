@@ -22,7 +22,7 @@ import DataTable from "../../component/DataTable";
 const Opportunity = () => {
   const {
     data: opportunitys,
-    error,
+
     isLoading,
     refetch,
   } = useGetOpportunitysQuery(undefined);

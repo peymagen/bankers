@@ -10,7 +10,7 @@ import {
   useGetJoinsQuery,
   useUpdateJoinMutation,
 } from "../../services/join.api";
-import { useAppDispatch } from "../../store/store";
+
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 
@@ -22,7 +22,7 @@ import DataTable from "../../component/DataTable";
 const Join = () => {
   const {
     data: joins,
-    error,
+
     isLoading,
     refetch,
   } = useGetJoinsQuery(undefined);
@@ -34,7 +34,6 @@ const Join = () => {
   const [updateJoin] = useUpdateJoinMutation();
   const [deleteJoin] = useDeleteJoinMutation();
 
-  const dispatch = useAppDispatch();
   const storedJoins = joins?.data || [];
 
   /**

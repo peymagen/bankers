@@ -19,7 +19,7 @@ import DataTable from "../../component/DataTable";
  * @returns {JSX.Element} - The rendered UsersPage component.
  */
 const User = () => {
-  const { data: users, error, isLoading, refetch } = useGetUsersQuery("");
+  const { data: users, isLoading, refetch } = useGetUsersQuery("");
   const [openDialog, setOpenDialog] = useState(false);
   const [userToEdit, setUserToEdit] = useState<any | null>(null);
   const [openConfirmDelete, setOpenConfirmDelete] = useState(false);

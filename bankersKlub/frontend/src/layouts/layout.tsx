@@ -1,14 +1,8 @@
-// Layout.tsx (unchanged)
-import React from "react";
 import { Box } from "@mui/material";
 import Sidebar from "./Sidebar"; // Path to your Sidebar component
 import { Outlet } from "react-router-dom";
 
-interface LayoutProps {
-  role: "ADMIN";
-}
-
-const Layout: React.FC<LayoutProps> = ({ role }) => {
+const Layout = () => {
   return (
     <Box sx={{ display: "flex" }}>
       <Sidebar role="ADMIN">

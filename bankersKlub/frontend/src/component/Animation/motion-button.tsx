@@ -27,8 +27,8 @@ const MotionButton: React.FC<MotionButtonProps> = ({ children, ...props }) => {
         padding: "12px 25px",
         border: "none",
         borderRadius: "8px",
-        backgroundColor: theme.palette.primary.main, // ✅ Uses theme color
-        color: theme.palette?.button?.default, // ✅ Adapts to light/dark mode
+        backgroundColor: theme.palette.primary.main, // ✅ Use button color if exists
+        color: theme.palette.button?.contrastText || "#fff", // ✅ Use contrast text color
         cursor: "pointer",
       }}
     >

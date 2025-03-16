@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Box,
   Typography,
@@ -13,7 +13,7 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import { Edit, Delete, Visibility } from "@mui/icons-material";
+import { Edit, Delete } from "@mui/icons-material";
 import MotionButton from "../../component/Animation/motion-button";
 import MotionBlock from "../../component/Animation/motion-block";
 import TableSkeleton from "../../component/Skeleton/table-skeleton";
@@ -25,7 +25,6 @@ import {
   useGetServicesQuery,
   useUpdateServiceMutation,
 } from "../../services/service.api";
-import { useAppDispatch, useAppSelector } from "../../store/store";
 import { toast } from "react-toastify";
 
 /**
@@ -36,7 +35,7 @@ import { toast } from "react-toastify";
 const Service = () => {
   const {
     data: services,
-    error,
+
     isLoading,
     refetch,
   } = useGetServicesQuery(undefined);
@@ -48,7 +47,6 @@ const Service = () => {
   const [updateService] = useUpdateServiceMutation();
   const [deleteService] = useDeleteServiceMutation();
 
-  const dispatch = useAppDispatch();
   const storedServices = services?.data || [];
 
   /**

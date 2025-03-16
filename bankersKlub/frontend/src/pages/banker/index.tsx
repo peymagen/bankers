@@ -10,7 +10,7 @@ import {
   useGetBankersQuery,
   useUpdateBankerMutation,
 } from "../../services/bankers.api";
-import { useAppDispatch } from "../../store/store";
+
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 
@@ -22,7 +22,7 @@ import DataTable from "../../component/DataTable";
 const Banker = () => {
   const {
     data: bankers,
-    error,
+
     isLoading,
     refetch,
   } = useGetBankersQuery(undefined);
@@ -34,7 +34,6 @@ const Banker = () => {
   const [updateBanker] = useUpdateBankerMutation();
   const [deleteBanker] = useDeleteBankerMutation();
 
-  const dispatch = useAppDispatch();
   const storedBankers = bankers?.data || [];
 
   /**

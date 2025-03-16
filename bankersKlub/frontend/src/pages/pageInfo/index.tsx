@@ -21,7 +21,7 @@ import DataTable from "../../component/DataTable";
 const PageInfo = () => {
   const {
     data: pageInfos,
-    error,
+
     isLoading,
     refetch,
   } = useGetPageInfosQuery(undefined);

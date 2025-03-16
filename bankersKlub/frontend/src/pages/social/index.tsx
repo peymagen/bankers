@@ -10,7 +10,7 @@ import {
   useGetSocialsQuery,
   useUpdateSocialMutation,
 } from "../../services/social.api";
-import { useAppDispatch } from "../../store/store";
+
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 
@@ -22,7 +22,7 @@ import DataTable from "../../component/DataTable";
 const Social = () => {
   const {
     data: socials,
-    error,
+
     isLoading,
     refetch,
   } = useGetSocialsQuery(undefined);
@@ -34,7 +34,6 @@ const Social = () => {
   const [updateSocial] = useUpdateSocialMutation();
   const [deleteSocial] = useDeleteSocialMutation();
 
-  const dispatch = useAppDispatch();
   const storedSocials = socials?.data || [];
 
   /**

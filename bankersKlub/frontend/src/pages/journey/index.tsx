@@ -21,7 +21,7 @@ import DataTable from "../../component/DataTable";
 const Journey = () => {
   const {
     data: journeys,
-    error,
+
     isLoading,
     refetch,
   } = useGetJourneysQuery(undefined);

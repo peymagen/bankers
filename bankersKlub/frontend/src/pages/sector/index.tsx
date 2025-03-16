@@ -21,7 +21,7 @@ import DataTable from "../../component/DataTable";
 const Sector = () => {
   const {
     data: sectors,
-    error,
+
     isLoading,
     refetch,
   } = useGetSectorsQuery(undefined);

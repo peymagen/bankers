@@ -21,7 +21,7 @@ import DataTable from "../../component/DataTable";
 const Category = () => {
   const {
     data: categorys,
-    error,
+
     isLoading,
     refetch,
   } = useGetCategorysQuery(undefined);

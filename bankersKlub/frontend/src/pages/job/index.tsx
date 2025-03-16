@@ -10,7 +10,7 @@ import {
   useGetJobsQuery,
   useUpdateJobMutation,
 } from "../../services/job.api";
-import { useAppDispatch } from "../../store/store";
+
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 
@@ -20,7 +20,7 @@ import DataTable from "../../component/DataTable";
  * @returns {JSX.Element} - The rendered JobsPage component.
  */
 const Job = () => {
-  const { data: jobs, error, isLoading, refetch } = useGetJobsQuery(undefined);
+  const { data: jobs, isLoading, refetch } = useGetJobsQuery(undefined);
   const [openDialog, setOpenDialog] = useState(false);
   const [jobToEdit, setJobToEdit] = useState<any | null>(null);
   const [openConfirmDelete, setOpenConfirmDelete] = useState(false);
@@ -29,7 +29,6 @@ const Job = () => {
   const [updateJob] = useUpdateJobMutation();
   const [deleteJob] = useDeleteJobMutation();
 
-  const dispatch = useAppDispatch();
   const storedJobs = jobs?.data || [];
 
   /**

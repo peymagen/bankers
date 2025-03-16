@@ -10,7 +10,6 @@ import {
   useGetAboutsQuery,
   useUpdateAboutMutation,
 } from "../../services/about.api";
-import { useAppDispatch } from "../../store/store";
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 
@@ -20,12 +19,7 @@ import DataTable from "../../component/DataTable";
  * @returns {JSX.Element} - The rendered AboutsPage component.
  */
 const About = () => {
-  const {
-    data: abouts,
-    error,
-    isLoading,
-    refetch,
-  } = useGetAboutsQuery(undefined);
+  const { data: abouts, isLoading, refetch } = useGetAboutsQuery(undefined);
   const [openDialog, setOpenDialog] = useState(false);
   const [aboutToEdit, setAboutToEdit] = useState<any | null>(null);
   const [openConfirmDelete, setOpenConfirmDelete] = useState(false);
@@ -34,7 +28,6 @@ const About = () => {
   const [updateAbout] = useUpdateAboutMutation();
   const [deleteAbout] = useDeleteAboutMutation();
 
-  const dispatch = useAppDispatch();
   const storedAbouts = abouts?.data || [];
 
   /**

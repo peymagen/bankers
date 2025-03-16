@@ -21,7 +21,7 @@ import DataTable from "../../component/DataTable";
 const Contact = () => {
   const {
     data: contacts,
-    error,
+
     isLoading,
     refetch,
   } = useGetContactsQuery(undefined);

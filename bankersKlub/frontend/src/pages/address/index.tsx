@@ -10,7 +10,6 @@ import {
   useGetAddresssQuery,
   useUpdateAddressMutation,
 } from "../../services/address.api";
-import { useAppDispatch } from "../../store/store";
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 
@@ -20,12 +19,7 @@ import DataTable from "../../component/DataTable";
  * @returns {JSX.Element} - The rendered AddresssPage component.
  */
 const Address = () => {
-  const {
-    data: addresss,
-    error,
-    isLoading,
-    refetch,
-  } = useGetAddresssQuery(undefined);
+  const { data: addresss, isLoading, refetch } = useGetAddresssQuery(undefined);
   const [openDialog, setOpenDialog] = useState(false);
   const [addressToEdit, setAddressToEdit] = useState<any | null>(null);
   const [openConfirmDelete, setOpenConfirmDelete] = useState(false);
@@ -34,7 +28,6 @@ const Address = () => {
   const [updateAddress] = useUpdateAddressMutation();
   const [deleteAddress] = useDeleteAddressMutation();
 
-  const dispatch = useAppDispatch();
   const storedAddresss = addresss?.data || [];
 
   /**

@@ -10,7 +10,7 @@ import {
   useGetBankerVideosQuery,
   useUpdateBankerVideoMutation,
 } from "../../services/banker_video.api";
-import { useAppDispatch } from "../../store/store";
+
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 
@@ -22,7 +22,7 @@ import DataTable from "../../component/DataTable";
 const BankerVideo = () => {
   const {
     data: bankerVideos,
-    error,
+
     isLoading,
     refetch,
   } = useGetBankerVideosQuery(undefined);
@@ -36,7 +36,6 @@ const BankerVideo = () => {
   const [updateBankerVideo] = useUpdateBankerVideoMutation();
   const [deleteBankerVideo] = useDeleteBankerVideoMutation();
 
-  const dispatch = useAppDispatch();
   const storedBankerVideos = bankerVideos?.data || [];
 
   /**

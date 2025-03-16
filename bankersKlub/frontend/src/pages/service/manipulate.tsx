@@ -68,7 +68,7 @@ const ManipulateDialog: React.FC<ServiceDialogProps> = ({
       if (value) {
         if (Array.isArray(value)) {
           // Handle multiple file uploads
-          value.forEach((file, index) => {
+          value.forEach((file) => {
             formData.append(key, file);
           });
         } else {
@@ -168,7 +168,11 @@ const ManipulateDialog: React.FC<ServiceDialogProps> = ({
                       label="Image"
                       accept={{ "image/*": [] }}
                       isMultiple={true}
-                      defaultFileUrl={serviceToEdit?.image?.split(",")}
+                      defaultFileUrl={
+                        typeof serviceToEdit?.image === "string"
+                          ? serviceToEdit.image.split(",")
+                          : undefined
+                      }
                       onDropFile={(acceptedFiles) => {
                         if (acceptedFiles?.length > 0) {
                           field.onChange(acceptedFiles);

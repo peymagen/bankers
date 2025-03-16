@@ -10,7 +10,7 @@ import {
   useGetWorkflowsQuery,
   useUpdateWorkflowMutation,
 } from "../../services/workflow.api";
-import { useAppDispatch } from "../../store/store";
+
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 
@@ -22,7 +22,7 @@ import DataTable from "../../component/DataTable";
 const Workflow = () => {
   const {
     data: workflows,
-    error,
+
     isLoading,
     refetch,
   } = useGetWorkflowsQuery(undefined);
@@ -34,7 +34,6 @@ const Workflow = () => {
   const [updateWorkflow] = useUpdateWorkflowMutation();
   const [deleteWorkflow] = useDeleteWorkflowMutation();
 
-  const dispatch = useAppDispatch();
   const storedWorkflows = workflows?.data || [];
 
   /**

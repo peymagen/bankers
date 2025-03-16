@@ -1,22 +1,7 @@
-import { useState, useEffect } from "react";
-import {
-  Box,
-  Typography,
-  IconButton,
-  Tooltip,
-  Grid,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-} from "@mui/material";
-import { Edit, Delete, Visibility } from "@mui/icons-material";
+import { useState } from "react";
+import { Box, Typography } from "@mui/material";
 import MotionButton from "../../component/Animation/motion-button";
 import MotionBlock from "../../component/Animation/motion-block";
-import TableSkeleton from "../../component/Skeleton/table-skeleton";
 import ManipulateDialog from "./manipulate";
 import ConfirmDeleteDialog from "./confirmDelete";
 import {
@@ -25,7 +10,6 @@ import {
   useGetPartnersQuery,
   useUpdatePartnerMutation,
 } from "../../services/partner.api";
-import { useAppDispatch, useAppSelector } from "../../store/store";
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 
@@ -37,7 +21,7 @@ import DataTable from "../../component/DataTable";
 const Partner = () => {
   const {
     data: partners,
-    error,
+
     isLoading,
     refetch,
   } = useGetPartnersQuery(undefined);
@@ -49,7 +33,6 @@ const Partner = () => {
   const [updatePartner] = useUpdatePartnerMutation();
   const [deletePartner] = useDeletePartnerMutation();
 
-  const dispatch = useAppDispatch();
   const storedPartners = partners?.data || [];
 
   /**

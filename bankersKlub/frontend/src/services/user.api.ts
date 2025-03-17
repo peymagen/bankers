@@ -5,10 +5,10 @@ export const apiUser = createApi({
   reducerPath: "apiUser",
   baseQuery: baseQueryWithReauth,
   endpoints: (builder) => ({
-    getUserById: builder.query<User, string>({
+    getUserById: builder.query({
       query: (id) => `users/${id}`,
     }),
-    getUsers: builder.query<User, string>({
+    getUsers: builder.query({
       query: () => "users",
     }),
     createUser: builder.mutation({

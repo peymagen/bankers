@@ -21,7 +21,7 @@ const FileUploader: React.FC<FileUploaderProps> = ({
   isMultiple = true,
   defaultFileUrl,
   onDropFile,
-
+  error,
   helperText,
 }) => {
   const [previews, setPreviews] = useState<

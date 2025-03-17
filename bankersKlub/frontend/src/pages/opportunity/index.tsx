@@ -10,7 +10,6 @@ import {
   useGetOpportunitysQuery,
   useUpdateOpportunityMutation,
 } from "../../services/opportunity.api";
-import { useAppDispatch } from "../../store/store";
 import { toast } from "react-toastify";
 import DataTable from "../../component/DataTable";
 

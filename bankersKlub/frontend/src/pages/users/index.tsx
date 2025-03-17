@@ -29,7 +29,6 @@ const User = () => {
   const [deleteUser] = useDeleteUserMutation();
 
   const storedUsers = users?.data || [];
-  console.log(storedUsers);
   /**
    * Opens the user manipulation dialog to add or edit a user.
    *

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import MotionButton from "../../component/Animation/motion-button";
 import MotionBlock from "../../component/Animation/motion-block";

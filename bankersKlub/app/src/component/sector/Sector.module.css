@@ -1,0 +1,57 @@
+.container {
+  place-items: center;
+  margin: 8rem 1rem;
+}
+.sector_div {
+  width: -webkit-fill-available;
+  display: flex;
+  background: antiquewhite;
+  background: url("/bg_cube.png") no-repeat center center/cover;
+  border-top-left-radius: 10rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 10rem;
+  margin: 2rem;
+  padding: 5rem;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sector_box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sector_card {
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  width: 150px;
+  justify-items: center;
+  place-content: center;
+  text-align: center;
+}
+.sector_card p {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 680px) {
+  .sector_div {
+    margin: unset;
+    padding: unset;
+  }
+  .sector_box {
+    padding: 5rem 1rem;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .sector_card {
+    width: 100%;
+  }
+  .sector_div > div:last-child {
+    display: none;
+  }
+}

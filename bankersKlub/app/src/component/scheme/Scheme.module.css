@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.container > div:nth-child(2) {
+  width: 30%;
+}
+.left {
+  width: 70%;
+  padding: 1rem;
+}
+.left > div:first-child {
+  height: 100%;
+}
+.left p {
+  font-size: x-large;
+}
+.left_div {
+  width: 100%;
+  align-content: center;
+  text-align: center;
+  height: 100%;
+  border-radius: 15px;
+}
+.left .DEFAULT {
+  background: rgb(from var(--primaryDefaultColor) r g b / 0.1);
+  box-shadow: 9px 10px 16px rgb(from var(--primaryDefaultColor) r g b / 0.16);
+}
+.left .CORPORATIONS {
+  background: rgb(from var(--secondaryCorporationColor) r g b / 0.2);
+  box-shadow: 9px 10px 16px
+    rgb(from var(--secondaryCorporationColor) r g b / 0.3);
+}
+.left .BANKERS {
+  background: rgb(from var(--secondaryBankerColor) r g b / 1);
+  box-shadow: 9px 10px 16px rgb(from var(--secondaryBankerColor) r g b / 0.3);
+}
+.left_div img {
+  height: auto;
+  width: 80%;
+}
+.right {
+  width: 100%;
+  padding: 3rem 2rem;
+  place-items: center;
+  border-radius: 1rem;
+}
+.right div {
+  width: 100%;
+}
+
+.right.DEFAULT {
+  border: 1px solid var(--primaryDefaultColor);
+}
+.right.CORPORATIONS {
+  border: 1px solid var(--secondaryCorporationColor);
+}
+.right.BANKERS {
+  border: 1px solid var(--secondaryBankerColor);
+}
+.head1 {
+  font-size: xx-large;
+  font-weight: 400;
+  min-height: 110px;
+  width: 90%;
+}
+.raise_amount {
+  font-size: 65px;
+  position: absolute;
+  font-weight: bold;
+}
+.head2 {
+  justify-self: right;
+  font-size: x-large;
+  font-weight: 400;
+  margin-bottom: 40px;
+  width: 80%;
+}
+.success_amount {
+  font-size: xx-large;
+  position: absolute;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+@media (max-width: 680px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .container > div:nth-child(2) {
+    width: 100%;
+  }
+  .left {
+    width: 100%;
+  }
+  .left_div img {
+    width: 100%;
+    padding: 2rem 0.5rem;
+  }
+  .right {
+    padding: 1rem;
+    text-align: center;
+  }
+  .head1 {
+    font-size: x-large;
+    min-height: 80px;
+  }
+  .head2 {
+    font-size: large;
+    margin-bottom: 20px;
+  }
+  .raise_amount {
+    font-size: 40px;
+  }
+  .success_amount {
+    font-size: x-large;
+  }
+}

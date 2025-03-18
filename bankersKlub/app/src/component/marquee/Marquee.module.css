@@ -1,0 +1,31 @@
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.marqueeWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  min-width: 100%;
+}
+
+.marqueeContent {
+  display: flex;
+  gap: 20px; /* Space between elements */
+  align-items: center;
+  animation: marquee 10s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

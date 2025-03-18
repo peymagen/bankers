@@ -1,0 +1,106 @@
+.upperContainer .outerDiv {
+  border-left: 1rem solid black;
+  border-bottom: 1rem solid black;
+  border-top: 1rem solid white;
+  border-right: 1rem solid white;
+  position: relative;
+  width: fit-content;
+}
+.upperContainer .innerDiv {
+  border-radius: 0.8rem;
+  background: var(--primaryDefaultColor);
+  position: relative;
+  bottom: 1rem;
+  left: 1rem;
+  max-width: 35rem;
+  display: flex;
+  padding: 2rem;
+  text-align: center;
+  gap: 2rem;
+  color: white;
+}
+.innerDiv img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  align-self: center;
+}
+.innerDiv div {
+  font-size: medium !important;
+  font-weight: 100 !important;
+  align-content: center;
+}
+.innerDiv p {
+  margin-bottom: 1rem;
+}
+.upperContainer {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  margin: 5rem 1rem;
+  margin-bottom: 1rem;
+}
+.upperContainer div {
+  align-content: center;
+  font-size: x-large;
+  font-weight: 600;
+}
+.listContainer {
+  display: flex;
+  gap: 5rem;
+  flex-wrap: wrap;
+  margin: 3rem 1rem;
+  place-self: center;
+}
+.person {
+  position: relative;
+  border-radius: 1rem;
+}
+.person img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.person div {
+  position: relative;
+  bottom: 4rem;
+  background: white;
+  box-shadow: 5px 5px 15px grey;
+  padding: 0.5rem 0.8rem;
+  margin: 0 1rem;
+  text-align: center;
+}
+.lowerContainer {
+  place-items: center;
+  gap: 5rem;
+  justify-content: center;
+  margin: 5rem 1rem;
+  margin-bottom: 1rem;
+}
+.lowerContainer h1 {
+  margin-bottom: 2rem;
+}
+.lowerContainer .outerDiv {
+  border-left: 1rem solid white;
+  border-bottom: 1rem solid white;
+  border-top: 1rem solid black;
+  border-right: 1rem solid black;
+  position: relative;
+  width: fit-content;
+}
+
+.lowerContainer .innerDiv {
+  border-radius: 0.8rem;
+  background: var(--primaryDefaultColor);
+  position: relative;
+  top: 1rem;
+  right: 1rem;
+  max-width: 35rem;
+  display: flex;
+  padding: 2rem;
+  text-align: center;
+  gap: 2rem;
+  color: white;
+}

@@ -1,0 +1,67 @@
+.d_flex {
+  display: flex;
+  margin: 0 5px;
+}
+
+.progress {
+  width: 120px;
+  height: 10px;
+  background: var(--secondaryDefaultColor);
+  margin: 1rem;
+}
+.unprogress {
+  width: 120px;
+  height: 10px;
+  background: rgba(201, 201, 201, 0.557);
+  margin: 1rem;
+}
+.margin_img {
+  margin: 10px 0;
+}
+.unmargin_img {
+  margin: 5px 0;
+}
+.heading {
+  font-size: 40px;
+  padding: 30px;
+  justify-self: center;
+}
+.container {
+  max-width: 986px;
+  margin: 8rem auto;
+}
+.content_text {
+  max-width: 350px;
+  padding: 3rem 0;
+  align-content: center;
+}
+.content {
+  padding: 3rem 0;
+}
+.description {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5rem 0;
+}
+
+@media (max-width: 600px) {
+  .journey {
+    display: flex;
+    gap: 3rem;
+    flex-direction: row;
+  }
+  .d_flex {
+    display: block;
+    flex-direction: column;
+  }
+  .unprogress,
+  .progress {
+    rotate: 90deg;
+    width: auto;
+  }
+  .description {
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+  }
+}

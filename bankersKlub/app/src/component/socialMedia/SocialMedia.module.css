@@ -1,0 +1,24 @@
+.flex {
+  display: flex;
+}
+.cover {
+  background: #80808045;
+  height: 3rem;
+  border-radius: 50%;
+  width: 3rem;
+  align-content: center;
+  text-align-last: center;
+  margin: 0 0.5rem;
+}
+.small_cover {
+  background: white;
+  height: 2rem;
+  border-radius: 50%;
+  width: 2rem;
+  align-content: center;
+  text-align-last: center;
+  margin: 0 0.5rem;
+}
+.flex img {
+  padding-top: 3px;
+}

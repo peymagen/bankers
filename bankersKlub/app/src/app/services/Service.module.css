@@ -1,0 +1,11 @@
+.flex_wrap {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin: 3rem 2rem;
+  place-content: center;
+}
+.container {
+  max-width: 1280px;
+  margin: 3rem auto;
+}

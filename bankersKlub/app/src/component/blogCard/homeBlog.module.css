@@ -1,0 +1,51 @@
+.blog_box {
+  margin: 5rem auto;
+  max-width: 1280px;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+.blog_container {
+  padding: 0 1rem;
+}
+.blog_head > div:last-child {
+  width: 80vh;
+}
+.banker_shadow {
+  box-shadow: 11px 9px 15px rgb(from var(--primaryBankerColor) r g b / 0.4);
+}
+.corporation_shadow {
+  box-shadow: 11px 9px 15px
+    rgb(from var(--primaryCorporationColor) r g b / 0.18);
+}
+.blog_head {
+  display: flex;
+  gap: 3rem;
+}
+
+.blog_head img {
+  width: 100%;
+  height: auto;
+}
+
+.blog_head h1 {
+  font-size: xxx-large;
+  padding: 1rem 0;
+}
+
+.blog_tail {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 680px) {
+  .blog_box {
+    padding: 3rem 1rem;
+    place-items: anchor-center;
+  }
+  .blog_head {
+    display: none;
+  }
+  .blog_tail {
+    flex-direction: column;
+  }
+}

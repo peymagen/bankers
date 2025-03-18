@@ -1,0 +1,6 @@
+.BANKERS {
+  color: var(--primaryBankerColor);
+}
+.CORPORATIONS {
+  color: var(--primaryCorporationColor);
+}

@@ -1,0 +1,117 @@
+.hero_container {
+  min-height: 50vh;
+  padding: 5rem 0;
+  background-image: url(../../../public/background.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.hero {
+  width: 100%;
+  min-height: 50vh;
+  padding: 5rem 1rem;
+  max-width: 1580px;
+  margin: 0 auto;
+}
+.hero > div:last-child {
+  align-self: self-end;
+}
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  margin-left: 5rem;
+}
+.hero_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.hero_head > div:first-child {
+  width: 50%;
+}
+.hero_head h1 {
+  text-transform: capitalize;
+  font-size: 85px;
+  line-height: 80px;
+}
+.hero_head p {
+  font-size: 24px;
+}
+.description {
+  margin-top: 3rem;
+}
+.banker_text {
+  color: var(--primaryBankerColor);
+}
+.corporation_text {
+  color: var(--primaryCorporationColor);
+}
+.hero_content button {
+  padding: 10px 30px;
+  font-weight: bold;
+  border: 0;
+}
+.start_content {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+.start_center {
+  place-self: center;
+  margin: 3rem;
+}
+.start_button {
+  background-color: var(--secondaryDefaultColor);
+  color: white;
+  box-shadow: 5px 3px 5px #00000063;
+  padding: 10px 30px;
+  font-weight: bold;
+  border: 0;
+}
+.active {
+  background-color: var(--primaryDefaultColor);
+  color: white;
+}
+.btnGroup {
+  margin-bottom: 3rem;
+  box-shadow: 5px 3px 5px #00000063;
+  width: fit-content;
+}
+.hero_content p {
+  font-weight: bold;
+}
+.hero_banner {
+  color: transparent;
+  align-self: end;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .hero_head {
+    flex-direction: column;
+  }
+  .hero_head > div:first-child {
+    width: 100%;
+  }
+  .hero_head h1 {
+    font-size: 45px;
+    line-height: 40px;
+  }
+  .hero_head p {
+    font-size: 18px;
+  }
+  .description {
+    margin-top: 1rem;
+  }
+  .hero_content {
+    width: 100%;
+    margin: auto;
+    align-items: center;
+  }
+  .start_content {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}

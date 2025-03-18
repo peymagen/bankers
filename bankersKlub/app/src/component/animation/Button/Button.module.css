@@ -1,0 +1,52 @@
+.button {
+  position: relative;
+  padding: 12px 24px;
+  white-space: nowrap;
+  width: fit-content;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+  font-weight: 600;
+  font-size: large;
+  border-radius: 5px;
+}
+
+.outline_primary {
+  background: #00800000;
+  color: var(--primaryDefaultColor);
+  border: 1px solid var(--primaryDefaultColor);
+}
+
+.solid_primary {
+  background-color: var(--primaryDefaultColor);
+  color: white;
+  border: 0;
+}
+.outline_secondary {
+  background: #00800000;
+  color: var(--secondaryDefaultColor);
+  border: 1px solid var(--secondaryDefaultColor);
+}
+
+.solid_secondary {
+  background-color: var(--secondaryDefaultColor);
+  color: white;
+  border: 0;
+}
+.solid_inactive {
+  background: rgba(202, 220, 255, 0.25);
+  color: #000000;
+}
+.shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: skewX(-30deg);
+  pointer-events: none;
+}

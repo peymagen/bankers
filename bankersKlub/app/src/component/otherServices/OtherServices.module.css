@@ -1,0 +1,47 @@
+/* Opportunity */
+
+.opportunity_box {
+  padding: 0 1rem;
+  display: flex;
+  gap: 15px;
+  margin: 5rem auto;
+  max-width: 1280px;
+}
+
+.opportunity_title {
+  font-size: xxx-large;
+  align-content: center;
+}
+
+.opportunity_card {
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  width: 100%;
+  margin: 1rem 0;
+  box-shadow: 11px 9px 15px rgb(from var(--primaryBankerColor) r g b / 0.4);
+}
+
+.opportunity_card button {
+  align-self: flex-end;
+  color: var(--secondaryBankerColor);
+  border: 0;
+  background: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .opportunity_box {
+    flex-direction: column;
+  }
+  .opportunity_box h1 {
+    font-size: xx-large;
+    text-align: center;
+  }
+  .opportunity_box img {
+    object-fit: contain;
+    width: 100%;
+  }
+}

@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw; /* Full width */
+  height: auto; /* Adjust height as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+  width: 100vw; /* Full width */
+  height: 90vh; /* Adjust height dynamically */
+  overflow: hidden;
+}
+
+.curtain {
+  position: absolute;
+  height: 100%;
+  background-color: white;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  transform-origin: center center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.revealed {
+  width: 0%;
+  opacity: 1;
+}
+
+.curtainImage,
+.wallImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.revealButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border: 1px solid var(--secondaryDefaultColor);
+  border-radius: 50%;
+  box-shadow: 6px 8px 10px rgb(from var(--secondaryDefaultColor) r g b / 0.18);
+  position: absolute;
+  top: 50%;
+  right: 5rem; /* Keep it on the right side */
+  transform: translateY(-50%);
+  z-index: 3;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  background: rgb(from var(--secondaryDefaultColor) r g b / 0.6);
+  padding-top: 5px;
+}

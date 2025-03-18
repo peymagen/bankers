@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  margin: 2rem 0;
+  height: 40rem;
+  padding: 5rem 2rem;
+  background: var(--primaryBankerColor);
+}
+
+.container > div:nth-child(1) {
+  width: 70%;
+}
+
+.container > div:nth-child(2) {
+  width: 30%;
+  background-color: transparent;
+}
+
+.videoRow {
+  display: flex;
+  gap: 10px;
+  overflow-x: hidden; /* Fixed: Allow scrolling */
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+.video,
+.activeVideo {
+  border-radius: 15px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.video {
+  width: 120px;
+}
+
+.activeVideo {
+  width: 70%;
+}
+
+.details {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+  height: 100%;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .container > div:nth-child(1) {
+    width: 100%;
+  }
+
+  .container > div:nth-child(2) {
+    width: 100%;
+  }
+
+  .videoRow {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .video {
+    width: 100%;
+    height: 5rem;
+  }
+
+  .activeVideo {
+    width: 100%;
+  }
+}

@@ -1,0 +1,20 @@
+.partner_box {
+  width: 100%;
+  justify-items: center;
+  margin: 10rem 1rem;
+}
+
+.partner_list {
+  gap: 50px;
+  display: flex;
+  margin: 1rem 2rem;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.partner_list img {
+  height: 100%;
+  width: auto;
+}

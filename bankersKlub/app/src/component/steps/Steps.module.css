@@ -1,0 +1,54 @@
+.flow_box {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+.steps {
+  margin: 10rem 0;
+}
+.flow {
+  text-align: center;
+  max-width: 17rem;
+  padding: 5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 11px 9px 15px rgb(from var(--primaryDefaultColor) r g b / 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.banker_shadow {
+  box-shadow: 11px 9px 15px rgb(from var(--primaryBankerColor) r g b / 0.4);
+}
+.corporation_shadow {
+  box-shadow: 11px 9px 15px
+    rgb(from var(--primaryCorporationColor) r g b / 0.18);
+}
+.flow img {
+  align-self: center;
+}
+.flow h1 {
+  color: var(--secondaryDefaultColor);
+}
+
+.start_center {
+  place-self: center;
+  margin: 3rem;
+}
+.start_button {
+  background-color: var(--secondaryDefaultColor);
+  color: white;
+  box-shadow: 5px 3px 5px #00000063;
+  padding: 10px 30px;
+  font-weight: bold;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  .flow_box {
+    flex-direction: column;
+    align-items: center;
+  }
+}

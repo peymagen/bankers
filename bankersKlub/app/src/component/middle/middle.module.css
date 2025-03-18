@@ -1,0 +1,39 @@
+.middle {
+  background-image: url(../../../public/middle.png);
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+  padding: 50px;
+  margin: 5rem 0;
+}
+.middle svg {
+  height: 100px;
+  width: 100px;
+}
+.middle_box {
+  display: flex;
+  gap: 50px;
+}
+
+.symbol_box {
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 200px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.symbol_box img {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .middle {
+    padding: 50px 5px;
+  }
+}

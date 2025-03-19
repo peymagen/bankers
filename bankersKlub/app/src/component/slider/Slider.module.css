@@ -30,3 +30,55 @@
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+.navBtn {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.swiper {
+  width: 80%;
+  padding: 4rem 0;
+}
+
+.slide {
+  justify-items: center;
+}
+
+.prevBtn {
+  left: -50px;
+}
+
+.nextBtn {
+  right: -50px;
+}
+
+.leftButton {
+  position: absolute;
+  z-index: 99;
+  left: 4rem;
+}
+
+.rightButton {
+  position: absolute;
+  z-index: 99;
+  right: 4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .swiper {
+    width: 90%;
+  }
+  .rightButton {
+    right: 0;
+  }
+  .leftButton {
+    left: 0;
+  }
+}

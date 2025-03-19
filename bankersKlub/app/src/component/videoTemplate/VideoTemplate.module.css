@@ -8,6 +8,7 @@
 .heroSection video {
   height: 35rem;
   border-radius: 3rem;
+  width: 100%;
 }
 .playIcon {
   width: 100%;

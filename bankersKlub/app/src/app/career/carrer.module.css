@@ -68,6 +68,9 @@
 .description {
   margin: 0 15px;
 }
+.description h2 {
+  font-size: xx-large;
+}
 .blue_bg {
   padding: 0 1rem;
   color: black;

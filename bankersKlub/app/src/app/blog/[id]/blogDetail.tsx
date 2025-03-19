@@ -31,7 +31,7 @@ export default function BlogDetail({ id }: BlogDetailProps) {
           />
           <div className={styles.overlay}>
             <h1 className={styles.title}>{blog.title}</h1>
-            <p className={styles.description}>{blog.description}</p>
+            <h3 className={styles.description}>{blog.description}</h3>
           </div>
         </div>
         <div className={styles.container}>
@@ -41,7 +41,7 @@ export default function BlogDetail({ id }: BlogDetailProps) {
                 {blog.category_name} {" | "} {relativeTime}
               </p>
               <div className={styles.blogContent}>
-                <p className={styles.category}>{blog.body}</p>
+                <h2 className={styles.category}>{blog.body}</h2>
                 <div dangerouslySetInnerHTML={{ __html: blog.content }} />
               </div>
             </div>

@@ -45,7 +45,7 @@ export default function PageInfo({
               <h1>{storedPageInfos?.title}</h1>
             </Div>
             <Div direction="left" delay={0.2}>
-              <p>{storedPageInfos?.description}</p>
+              <h3>{storedPageInfos?.description}</h3>
             </Div>
             <Div direction="bottom" delay={0.2}>
               <div className={style.btn_box}>

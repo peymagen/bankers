@@ -54,7 +54,7 @@ export default function ContactPage() {
         </Div>
         <Div direction="bottom" delay={0.5}>
           <div className={style.quotes}>
-            <h1>Expertise Meets Vision at BankersKlub</h1>
+            <h2>Expertise Meets Vision at BankersKlub</h2>
           </div>
         </Div>
         <Div direction="bottom" delay={2}>

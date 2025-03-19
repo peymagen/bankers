@@ -59,7 +59,7 @@ export default function CarrerPage() {
             <Div direction="left">
               <div className={style.description}>
                 <b>BENEFITS</b>
-                <h1>Why you Should Join Our Awesome Team</h1>
+                <h2>Why you Should Join Our Awesome Team</h2>
                 <p>
                   we want to feel like home when you are working at JMC(Japan
                   Marketing & Consultancy Limited) & for that we have curated a

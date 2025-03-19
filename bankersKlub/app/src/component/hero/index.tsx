@@ -26,7 +26,7 @@ export default function Hero({
           <div>
             <TypingText className={active} text={title} speed={100} />
             <Div delay={2} direction="left">
-              <p className={styles.description}>{description}</p>
+              <h2 className={styles.description}>{description}</h2>
             </Div>
           </div>
           <Div direction="right" duration={1} delay={3}>

@@ -1,55 +1,59 @@
-import React, { useMemo, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 import styles from "./Slider.module.css";
-import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { useState } from "react";
 import ServiceCard from "../service/card";
-import Div from "../animation/Div";
+import useBreakpoint from "@/hooks/useBreakPoints";
 
-interface SliderProps {
-  data: IService[];
-  row: number;
-}
+const Slider = ({ data = [], row = 3 }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
 
-export default function Slider({ data, row }: SliderProps) {
-  const [card, setCard] = useState(0);
-  const showData = useMemo(
-    () => data?.slice(card < 0 ? 0 : card, card + row) || [],
-    [data, card, row]
-  );
+  const isRow = useBreakpoint("md") ? 1 : row;
+  console.log("isMobile", isRow);
+  if (!data.length) return null;
 
   return (
     <div className={styles.sliderContainer}>
-      {/* Navigation Buttons */}
       <button
-        className={`${styles.button} ${styles.leftButton}`}
-        onClick={() => card >= 0 && setCard(card - 1)}
-        disabled={card < 0}
+        className={`prevBtn ${styles.button} ${styles.navBtn} ${styles.leftButton}`}
       >
         <FaArrowLeftLong />
       </button>
-
-      <div className={styles.cards}>
-        {showData.map((d: IService, index) => (
-          <Div key={index} delay={index * 0.5}>
+      <Swiper
+        modules={[Navigation]}
+        loop={true}
+        centeredSlides={true}
+        spaceBetween={30}
+        slidesPerView={isRow}
+        navigation={{
+          nextEl: ".nextBtn",
+          prevEl: ".prevBtn",
+        }}
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        className={styles.swiper}
+      >
+        {data.map((d: IService, index) => (
+          <SwiperSlide key={index} className={styles.slide}>
             <ServiceCard
-              active={
-                card < 0
-                  ? index === 0 && true
-                  : index === Math.floor(row / 2) && true
-              }
+              active={index === activeIndex ? true : false}
               d={d}
               key={index}
             />
-          </Div>
+          </SwiperSlide>
         ))}
-      </div>
-
+      </Swiper>
+      {/* Right Navigation Button */}
       <button
-        className={`${styles.button} ${styles.rightButton}`}
-        onClick={() => card + row < data?.length + 1 && setCard(card + 1)}
-        disabled={card + row >= data?.length + 1}
+        className={`nextBtn ${styles.button} ${styles.navBtn} ${styles.rightButton}`}
       >
         <FaArrowRightLong />
       </button>
     </div>
   );
-}
+};
+
+export default Slider;

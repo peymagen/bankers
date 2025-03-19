@@ -22,13 +22,12 @@ export default function Middle({ title, content }: MiddleProps) {
             ) => (
               <div key={i} className={style.symbol_box}>
                 {d.icon ? (
-                  d?.icon
-                ) : d.image ? (
                   <Image
                     src={
-                      process.env.NEXT_PUBLIC_BACKEND_API_URL + d?.image || ""
+                      (process.env.NEXT_PUBLIC_BACKEND_API_URL ?? "") +
+                        d.icon || ""
                     }
-                    alt={d.image}
+                    alt={d.title}
                     height={100}
                     width={100}
                   />

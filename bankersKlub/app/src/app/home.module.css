@@ -42,7 +42,7 @@
   background: var(--secondaryBankerColor);
   color: white;
   padding: 1rem 4rem;
-  width: min-content;
+  width: 90%;
   margin: auto;
   border-top-left-radius: 5rem;
   border-bottom-right-radius: 5rem;
@@ -51,7 +51,7 @@
   background: url("/bg_cube.png") no-repeat center center/cover;
   color: white;
   padding: 1rem 4rem;
-  width: min-content;
+  width: 90%;
   margin: auto;
   border-top-left-radius: 5rem;
   border-bottom-right-radius: 5rem;

@@ -92,7 +92,7 @@ export default function About() {
 
           <div>
             <Div direction="top" delay={2.5}>
-              <h1 className={style.overview_head}>Our Company Overview</h1>
+              <h2 className={style.overview_head}>Our Company Overview</h2>
             </Div>
             <Div direction="right" delay={3}>
               <p>{storedCompanyInfos?.description}</p>

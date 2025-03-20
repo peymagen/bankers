@@ -28,7 +28,6 @@ const TypingText = ({ className, text, speed = 100 }: TypingTextProps) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="text-lg font-mono"
     >
       <h1 className={Styles?.[className]}>{displayedText}</h1>
     </motion.div>

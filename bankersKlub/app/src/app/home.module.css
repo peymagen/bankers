@@ -46,6 +46,8 @@
   margin: auto;
   border-top-left-radius: 5rem;
   border-bottom-right-radius: 5rem;
+  position: relative;
+  top: -100px;
 }
 .corporation_video {
   background: url("/bg_cube.png") no-repeat center center/cover;
@@ -55,6 +57,8 @@
   margin: auto;
   border-top-left-radius: 5rem;
   border-bottom-right-radius: 5rem;
+  position: relative;
+  top: -100px;
 }
 .banker_bg {
   background: var(--primaryBankerColor);

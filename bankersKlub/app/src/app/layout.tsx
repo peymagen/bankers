@@ -1,5 +1,5 @@
 "use client";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Rufina } from "next/font/google";
 import "./globals.css";
 import Header from "@/component/header";
 import { useEffect } from "react";
@@ -17,6 +17,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const rufina = Rufina({
+  variable: "--font-rufina",
+  subsets: ["latin"],
+  weight: ["400", "700"], // You can adjust the weights as needed
 });
 
 export default function RootLayout({
@@ -60,7 +66,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${rufina.variable} ${geistSans.variable} ${geistMono.variable}`}
+      >
         <Provider store={store}>
           <Header />
           <Div delay={0.1}>{children}</Div>

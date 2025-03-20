@@ -1,6 +1,8 @@
 .BANKERS {
   color: var(--primaryBankerColor);
+  font-family: var(--font-rufina), serif;
 }
 .CORPORATIONS {
   color: var(--primaryCorporationColor);
+  font-family: var(--font-rufina), serif;
 }

@@ -1,0 +1,71 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #fff;
+}
+.header img {
+  width: 20rem;
+  height: 3rem;
+}
+.links {
+  display: flex;
+  gap: 1rem;
+  color: #000;
+}
+.links p {
+  font-size: medium;
+  margin: auto;
+}
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+.buttons > button {
+  border-radius: 5rem;
+  font-size: medium;
+  padding: 0.5rem 1rem;
+}
+.buttons button:nth-child(1) {
+  border: 1px solid #2c2c2c;
+  background: white;
+  color: #2c2c2c;
+}
+.buttons button:nth-child(2) {
+  border: 0;
+  background: #2c2c2c;
+  color: white;
+}
+.hero_section {
+  background-image: url("/hero-bg.png");
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat;
+  background-color: #e6e6e6;
+}
+.heading {
+  padding: 2rem 5rem;
+}
+.heading_head {
+  font-size: 75px;
+}
+.heading_body {
+  font-size: 80px;
+}
+.button {
+  padding: 1rem;
+  border-radius: 5rem;
+  border: 0;
+  color: #fff;
+  background: #da2f58;
+  font-size: medium;
+}
+.sub_heading {
+  margin: 2rem 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.sub_heading p {
+  font-size: 18px;
+  width: 60%;
+}
